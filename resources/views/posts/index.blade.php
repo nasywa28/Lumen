@@ -25,11 +25,11 @@
                 
             @endif
 
-            {{-- @if (session()->has('success'))
+            @if (session()->has('success'))
           <div class="alert alert-success">
             {{session('success')}}
         </div>
-          @endif --}}
+          @endif
 
             <form action='' method='post'>
                 @csrf

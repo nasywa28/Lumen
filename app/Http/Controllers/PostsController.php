@@ -42,7 +42,7 @@ class PostsController extends Controller
         $error = $contentArray['message'];
         return redirect()->to('posts')->withErrors($error);
        }else{
-        echo "Sukses";
+        return redirect()->to('posts')->with('success', 'Berhasil melakukan update data');
        }
     }
 
@@ -58,7 +58,7 @@ class PostsController extends Controller
             $error = $contentArray['message'];
             return redirect()->to('posts')->withErrors($error);
         }else{
-            $data = $contentArray['message'];
+            $data = $contentArray['data'];
             return view('posts.index', ['data' => $data]);
         }
     }
